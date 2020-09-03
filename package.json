@@ -11,7 +11,10 @@
     "egg-mysql": "^3.0.0",
     "egg-redis": "^2.4.0",
     "egg-scripts": "^2.11.0",
-    "egg-socket.io": "^4.1.6"
+    "egg-sequelize": "^5.2.2",
+    "egg-socket.io": "^4.1.6",
+    "egg-swagger-doc": "^2.3.2",
+    "mysql2": "^2.1.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",
@@ -19,6 +22,7 @@
     "egg-bin": "^4.11.0",
     "egg-ci": "^1.11.0",
     "egg-mock": "^3.21.0",
+    "egg-sequelize-auto": "^0.1.1",
     "eslint": "^5.13.0",
     "eslint-config-egg": "^7.1.0"
   },
@@ -28,6 +32,7 @@
   "scripts": {
     "start": "egg-scripts start --daemon --title=egg-server-fg_serve --sticky",
     "stop": "egg-scripts stop --title=egg-server-fg_serve",
+    "dbload": "egg-sequelize-auto -o ./app/model -h localhost -p 3306 -d shop -u rxdt -x yf6533490",
     "dev": "egg-bin dev --sticky",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",

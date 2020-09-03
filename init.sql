@@ -17,20 +17,55 @@ CREATE TABLE IF NOT EXISTS `hotgoods`(
    `type` INT NOT NULL,
    `name` VARCHAR(100) NOT NULL,
    `img` VARCHAR(100) NOT NULL,
+   `total` INT NOT NULL,
+   `hasSale` INT NOT NULL,
    `descp` VARCHAR(2000) NOT NULL,
-   `beginTime` DATETIME,
-   `endTime` DATETIME,
+   `price` FLOAT NOT NULL,
    PRIMARY KEY ( `id` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO user 
-   (account_id, name, header,password,createTime)
-   VALUES
-   (1001, "阿飞", "xx","yf6533490",NOW());
-	
+CREATE TABLE IF NOT EXISTS `seckill`(
+   `id` INT UNSIGNED AUTO_INCREMENT,
+   `goods_id` INT NOT NULL,
+   `type` INT NOT NULL,
+   `name` VARCHAR(100) NOT NULL,
+   `img` VARCHAR(100) NOT NULL,
+   `descp` VARCHAR(2000) NOT NULL,
+   `total` INT NOT NULL,
+   `hasSale` INT NOT NULL,
+   `beginTime` DATETIME,
+   `endTime` DATETIME,
+   `price` FLOAT NOT NULL,
+   PRIMARY KEY ( `id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE IF NOT EXISTS `kind`(
+   `id` INT UNSIGNED AUTO_INCREMENT,
+   
+   `parent_id` INT NOT NULL,
+   `type` INT NOT NULL,
+   `name` VARCHAR(100) NOT NULL,
+   `img` VARCHAR(100) NOT NULL,
+   `descp` VARCHAR(2000) NOT NULL,
+   `total` INT NOT NULL,
+   `hasSale` INT NOT NULL,
+   `beginTime` DATETIME,
+   `endTime` DATETIME,
+   `price` FLOAT NOT NULL,
+   PRIMARY KEY ( `id` )
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 INSERT INTO hotgoods
-   (article_id, title, author,content,createTime) 
+   (goods_id,type,name,img,total,hasSale,descp,price) 
    VALUES 
-   (10002, "产地直供番茄", "阿飞","文章内容",'2018-04-11 10:50:10');
+   (1,'1',"产地直供番茄","11.png",1000,10,"空运直达,产地直供",17.7);
+
+
+INSERT INTO seckill
+   (goods_id, type, name,descp,total,hasSale,beginTime,endTime,price) 
+   VALUES 
+   (1,'1',"泰国榴莲","空运直达，产地直供","11.png",1000,100,'2018-09-03 10:50:10','2018-09-04 10:50:10',10);
 
