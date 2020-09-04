@@ -8,7 +8,7 @@ module.exports = app => {
   router.get('/', controller.home.index);
   //客户端
   router.get('/minapp/seckill/list', controller.home.seckillList);
-
+  router.get('/minapp/upload', controller.upload.upload);
   // //管理系统
   // router.get('/admin', controller.admin.index);
   // router.get('/admin/list', controller.admin.list);

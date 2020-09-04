@@ -3,7 +3,7 @@ const Service = require('egg').Service;
 class HomeService extends Service {
 	constructor(ctx){
 		super(ctx); // 调用父对象上的函数。
-		this.dataSeckill =  this.ctx.model['seckill'];
+		// this.dataSeckill =  this.ctx.model['seckill'];
 	}
 	async index() {
 		const user = this.app.mysql.get('user', { id: 1 });

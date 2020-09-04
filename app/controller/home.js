@@ -1,13 +1,14 @@
 'use strict';
 
 const Controller = require('egg').Controller;
+
 /**
-* @controller 首页。
+* @controller HomeController （注释必写，swagger-doc是根据这段注释来生成接口的 ）。
 */
 class HomeController extends Controller {
 
   
-  /** 秒杀列表
+  /**  （ 注释必写，swagger-doc是根据这段注释来生成接口详细信息的 ）。
     * @summary 查询秒杀列表。
     * @description 查询秒杀列表。
     * @router get /minapp/seckill/list （ get 表示设置请求为 get 请求，最后的 selectById 对应下面的 selectById 方法 ）。

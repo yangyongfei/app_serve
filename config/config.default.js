@@ -26,7 +26,7 @@ module.exports = appInfo => {
 
   // egg-swagger-doc 配置信息。
   exports.swaggerdoc = {
-    dirScanner: '../app/controller', // 配置自动扫描的控制器路径。
+    dirScanner: './app/controller', // 配置自动扫描的控制器路径。
     // 接口文档的标题，描述或其它。
     apiInfo: {
         title: 'NAPI',  // 接口文档的标题。
@@ -58,7 +58,7 @@ module.exports = appInfo => {
     enable: true,   // 默认 true (启用)。
   };
 
-
+  
 
   exports.io = {
     namespace: {
@@ -94,19 +94,9 @@ module.exports = appInfo => {
     // 是否加载到 agent 上，默认关闭
     agent: false,
   };
-  // 数据库配置信息。
-  // exports.sequelize = {
-  //   dialect: 'mysql',   // 数据库类型，支持 mysql，sqlite,mssql,pgsql,oracle。
-  //   host: "localhost",  // 数据库服务器地址。
-  //   port: "3306", // 数据库连接端口号。
-  //   database: "shop", // 数据库名称。
-  //   username: "rxdt",   // 数据库登录用户名。
-  //   password: "yf6533490",   // 数据库登录密码。
-  //   define: {
-  //       freezeTableName: true, // Model 对应的表名将与model名相同。
-  //       timestamps: false // 默认情况下，Sequelize会将createdAt和updatedAt的属性添加到模型中，以便您可以知道数据库条目何时进入数据库以及何时被更新（ 确实是太方便了，然而我们一般用不到 ....）。
-  //   }
-  // };
+  
+
+  exports.uploadDir = 'app/upload';
   return {
     ...config,
     ...userConfig,

@@ -14,7 +14,8 @@
     "egg-sequelize": "^5.2.2",
     "egg-socket.io": "^4.1.6",
     "egg-swagger-doc": "^2.3.2",
-    "mysql2": "^2.1.0"
+    "mysql2": "^2.1.0",
+    "silly-datetime": "^0.1.2"
   },
   "devDependencies": {
     "autod": "^3.0.1",
