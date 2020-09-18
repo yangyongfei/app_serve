@@ -96,6 +96,13 @@ module.exports = appInfo => {
   };
   
 
+  exports.wechat_config = {
+    APPID:'wxd77416ea2b233e8b',
+    SECRET:'b07d5036268670ed6832678f4cabafeb',
+    token: 'wechat_public_number_demo',
+  };
+  
+
   exports.uploadDir = 'app/upload';
   return {
     ...config,
